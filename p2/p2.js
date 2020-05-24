@@ -1,3 +1,5 @@
+let startTime = performance.now()
+
 const mainHeading = document.querySelector('#main-heading');
 const otherHeading = document.querySelector('#other-heading');
 const excitedText = document.createElement('span');
@@ -32,4 +34,7 @@ function beforePageExit(event) {
 
 document.addEventListener("beforeunload", beforePageExit)
 
+let endTime = performance.now()
+
+console.log("The total running time is ", (endTime - startTime)*360)
 
